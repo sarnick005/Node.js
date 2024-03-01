@@ -13,5 +13,5 @@
 
 
 <h3>Contact</h3>
-<p>If you have any questions or suggestions regarding this repository, feel free to contact me at sarnick.chakraborty@gmail.com</p>
+<p>If you have any questions or suggestions regarding this repository, feel free to contact me at sarnick.chakraborty@gmail.com or connect through LinkdIn : <a href= "in/sarnick-chakraborty-16828423a"></p>
 
