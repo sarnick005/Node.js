@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <% if(movieDetails){ %> <% for(m of movieDetails){ %>
+    <title><%= m.movieName %></title>
+    <% } %> <% } else { %>
+    <title>No Movies Found</title>
+    <% } %>
+    <link rel="stylesheet" href="/public/css/movieDetails.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <form action="/movie" method="get">
+      <img
+        id="icon"
+        src="/public/uploads/img2.png"
+        alt="icon"
+        onclick="this.parentNode.submit();"
+      />
+    </form>
+    <div class="header">
+      <h1>LensLingo</h1>
+    </div>
+    <% if(movieDetails){ %> <% for(m of movieDetails){ %>
+    <div class="movie-container">
+      <img src="<%= m.cover %>" alt="<%= m.movieName %>" class="movie-image" />
+      <div class="movie-details">
+        <table>
+          <tr>
+            <td style="font-weight: 700">Movie Name:</td>
+            <td><%= m.movieName %></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700">Director Name:</td>
+            <td><%= m.directorName %></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700">Language:</td>
+            <td><%= m.language %></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700">Release Date:</td>
+            <td><%= m.releaseDate %></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700">Duration:</td>
+            <td><%= m.duration %></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700">Genre:</td>
+            <td><%= m.genre %></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700">Description:</td>
+            <td><%= m.description %></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700">Ratings:</td>
+            <% if(m.ratings == 0) { %>
+            <td><%= m.ratings %></td>
+            <% } else if(m.ratings >= 1 && m.ratings < 2) { %>
+            <td>
+              <%= m.ratings %><i
+                class="fa-solid fa-star"
+                style="color: #ffd43b"
+              ></i>
+            </td>
+            <% } else if(m.ratings >= 2 && m.ratings < 3) { %>
+            <td>
+              <%= m.ratings %><i
+                class="fa-solid fa-star"
+                style="color: #ffd43b"
+              ></i
+              ><i class="fa-solid fa-star" style="color: #ffd43b"></i>
+            </td>
+            <% } else if(m.ratings >= 3 && m.ratings < 4) { %>
+            <td>
+              <%= m.ratings %><i
+                class="fa-solid fa-star"
+                style="color: #ffd43b"
+              ></i
+              ><i class="fa-solid fa-star" style="color: #ffd43b"></i
+              ><i class="fa-solid fa-star" style="color: #ffd43b"></i>
+            </td>
+            <% } else if(m.ratings >= 4 && m.ratings < 5) { %>
+            <td>
+              <%= m.ratings %><i
+                class="fa-solid fa-star"
+                style="color: #ffd43b"
+              ></i
+              ><i class="fa-solid fa-star" style="color: #ffd43b"></i
+              ><i class="fa-solid fa-star" style="color: #ffd43b"></i
+              ><i class="fa-solid fa-star" style="color: #ffd43b"></i>
+            </td>
+            <% } else if(m.ratings == 5) { %>
+            <td>
+              <%= m.ratings %><i
+                class="fa-solid fa-star"
+                style="color: #ffd43b"
+              ></i
+              ><i class="fa-solid fa-star" style="color: #ffd43b"></i
+              ><i class="fa-solid fa-star" style="color: #ffd43b"></i
+              ><i class="fa-solid fa-star" style="color: #ffd43b"></i
+              ><i class="fa-solid fa-star" style="color: #ffd43b"></i>
+            </td>
+            <% } %>
+          </tr>
+        </table>
+      </div>
+      <div class="user-actions">
+        <div class="stars">
+          <form action="/movie/<%= m.movieName %>/rating" method="get">
+            <div class="rating">
+              <input type="radio" id="star5" name="rating" value="5" />
+              <label for="star5"><i class="far fa-star"></i></label>
+              <input type="radio" id="star4" name="rating" value="4" />
+              <label for="star4"><i class="far fa-star"></i></label>
+              <input type="radio" id="star3" name="rating" value="3" />
+              <label for="star3"><i class="far fa-star"></i></label>
+              <input type="radio" id="star2" name="rating" value="2" />
+              <label for="star2"><i class="far fa-star"></i></label>
+              <input type="radio" id="star1" name="rating" value="1" />
+              <label for="star1"><i class="far fa-star"></i></label>
+            </div>
+            <br />
+            <button id="rating-btn" type="submit" class="submit-btn">
+              Submit
+            </button>
+          </form>
+        </div>
+        <div class="review-field">
+          <form action="http://localhost:8080/movie/<%= m.movieName %>/review" method="post">
+            <textarea name="textArea" id="text-input" cols="100" rows="15" placeholder="Write your review here"></textarea><br />
+            <div class="results">
+                <p><span id="character-count">500</span>/500</p>
+            </div>
+            <button class="review-submit-btn" type="submit">Submit</button>
+        </form>        
+        </div>
+      </div>
+    </div>
+    <h2 class="reviews">Reviews</h2>
+    <div class="review-section">
+      <div class="review-msg">
+        <p id="review-text"></p>
+      </div>
+    </div>
+    <% } %> <% } else { %>
+    <div class="no-movies">
+      <h1>
+        No Movies Found
+        <i class="fa-regular fa-face-frown" style="color: #000000"></i>
+      </h1>
+    </div>
+    <% } %>
+    <script src="/public/js/movieDetails.js"></script>
+  </body>
+</html>

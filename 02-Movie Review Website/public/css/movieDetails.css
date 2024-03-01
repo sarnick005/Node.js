@@ -1,0 +1,297 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.header {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+.movie-container {
+    padding: 40px 10px;
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.movie-image {
+    height: 450px;
+    width: 350px;
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.movie-details {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-x: auto; /* Add this line to enable horizontal scrolling if needed */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    white-space: wrap; /* Prevent text wrapping */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e0e0e0;
+}
+
+.no-movies {
+    text-align: center;
+    color: #777;
+    margin-top: 50px;
+}
+
+.no-movies i {
+    font-size: 48px;
+}
+
+#icon {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+    margin: 20px auto; 
+    display: block; 
+    cursor: pointer;
+}
+
+#icon:hover {
+    transform: scale(1.05); 
+    border-color: #ff5722; 
+}
+
+/* ... other existing styles ... */
+
+
+#logo{
+    height: 76px;
+    width: 283px;
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+}
+
+/* STAR RATING */
+
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    position: relative;
+    display: inline-block;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    display: inline-block;
+    padding: 5px;
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+    color: #ffcc00;
+}
+
+.solid-star {
+    color: #fed339 !important;
+}
+
+#selected-rating {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.stars{
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px; 
+}
+
+/* RATING BTN */
+/* Add this to your existing CSS */
+
+.submit-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    left: 55px;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+/* Add this to your existing CSS */
+
+textarea {
+    width: 60%;
+    padding: 8px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none; /* Disable textarea resizing */
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+}
+
+.review-field{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-submit-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    position: relative;
+    left: 334px
+}
+
+.review-submit-btn:hover {
+    background-color: #45a049;
+}
+
+textarea{
+    position: relative;
+    left: 72px;
+    width: 80%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.results {
+    margin-top: 10px;
+}
+
+#character-count {
+    font-weight: bold;
+    color: #333; 
+    font-size: 16px; 
+}
+
+
+#character-count::before {
+    content: "(";
+}
+
+#character-count::after {
+    content: ")";
+}
+
+
+.results p {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* REVIEW-SECTION */
+
+/* ... your existing styles ... */
+
+/* REVIEW-SECTION */
+
+.review-section {
+    margin-top: 20px;
+}
+
+.review-msg {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-align: left; /* Align text to the left for a cleaner look */
+}
+
+.review-msg p {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    padding: 15px; /* Adjust padding for better spacing */
+    line-height: 1.5;
+}
+
+/* Center the review messages */
+.review-msg p {
+    margin: 0 auto;
+    max-width: 80%; /* Adjust the maximum width as needed */
+}
+
+/* Add a border to the review message */
+.review-msg {
+    padding: 10px;
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Highlight on hover */
+.review-msg:hover {
+    background-color: #f8f8f8; /* Add a subtle background color on hover */
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+h2.reviews {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+    font-size: 24px; /* Adjust the font size as needed */
+}

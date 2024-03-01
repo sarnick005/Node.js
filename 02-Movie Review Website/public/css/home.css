@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; 
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333; 
+}
+
+header {
+    background-color: #2c3e50; 
+    padding: 15px 0;
+    color: #ecf0f1; 
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #34495e;
+    margin-top: 20px;
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background-color: #2c3e50; 
+}
+
+#icon {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid #ecf0f1; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+    margin: 20px auto; 
+    display: block;
+    cursor: pointer;
+}
+
+#icon:hover {
+    transform: scale(1.05);
+    border-color: #e74c3c; 
+}
+
+h1, h2 {
+    color: #2c3e50; 
+    margin-top: 0;
+}
+
+.all-movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.movie-card {
+    margin: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #ecf0f1; 
+    transition: 0.3s ease-in-out;
+}
+
+.all-movies img {
+    height: 310px;
+    width: 245px;
+    max-width: 100%;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+#movie-name {
+    font-weight: 600;
+    max-width: 200px;
+    text-align: center;
+    margin: 10px 0;
+    color: #2c3e50; 
+    font-size: 16px;
+    background: linear-gradient(45deg, #3498db, #2980b9); 
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+#movie-name:hover {
+    background: linear-gradient(45deg, #2980b9, #3498db); 
+    transform: scale(1.1);
+    color: #ecf0f1;
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+}
+
+.all-movies button {
+    font-size: 14px;
+    background-color: #e74c3c; 
+    color: #ecf0f1;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.all-movies button:hover {
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+    color: #fff;
+}
+
+.all-movies img:hover, .movie-card:hover {
+    transform: scale(1.02);
+}
+
+#logo {
+    height: 76px;
+    width: 283px;
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-decoration: underline;
+    color: #2c3e50; 
+}
+
+.rating {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.average-rating {
+    margin: 8px;
+}
+
+.star-container {
+    display: flex;
+    align-items: center;
+}
+
+.fa-star {
+    font-size: 24px;
+    color: #f39c12; 
+}
+
+/* GENRE BTNS */
+
+.genre-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.genre-btns button {
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #27ae60; 
+    color: #ecf0f1;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.genre-btns button:hover {
+    background-color: #2ecc71;
+    transform: scale(1.05);
+}

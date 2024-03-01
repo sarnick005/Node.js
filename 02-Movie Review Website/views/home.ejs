@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Movie Review App</title>
+    <link rel="stylesheet" href="/public/css/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <img id="icon" src="/public/uploads/img2.png" alt="icon" />
+    <h1>LensLingo</h1>
+    <h2>All Movies</h2>
+    <div class="genre-btns">
+      <form id="allForm" action="/" method="get">
+        <button value="all">All</button>
+      </form>
+      <form action="/" method="get">
+        <button value="action">Action</button>
+      </form>
+      <form action="/" method="get">
+        <button value="horror">Horror</button>
+      </form>
+      <form action="/" method="get">
+        <button value="thriller">Thriller</button>
+      </form>
+      <form action="/" method="get">
+        <button value="fantasy">Fantasy</button>
+      </form>
+    </div>
+    <div class="all-movies">
+      <% for(r of result){ %>
+      <div class="movie-card">
+        <form action="./movie/<%= r.movieName %>" method="get">
+          <img
+            src="<%= r.cover %>"
+            alt="<%= r.movieName %>"
+            onclick="this.parentNode.submit();"
+          />
+          <br />
+          <div class="rating">
+            <span class="average-rating"><%= r.ratings %></span>
+            <div class="star-container">
+                <i class="fa-solid fa-star" style="color: #ffd43b;"></i>
+            </div>
+        </div>
+        
+          <button type="submit" id="movie-name"><%= r.movieName %></button>
+        </form>
+      </div>
+      <% } %>
+    </div>
+    <script>
+      <!-- document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("allForm").submit();
+      }); -->
+    </script>
+  </body>
+</html>
