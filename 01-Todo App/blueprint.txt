@@ -1,0 +1,20 @@
+TODO APP
+
+Project Plan
+1. User can create todos and it will be stored in db with date, time and due date and time 
+2. user can mark a todo as done
+3. user can edit an todo and changes will be saved in db
+4. user can delete a todo
+
+
+Structure : 
+ 1. there will be a side bar with "Home", "Add todo", "Completed", "Uncompleted". 
+ 2. DB -> taskDetails(id, taskDetails, timeCreated, dateCreated, dueDate, dueTime) 
+ id VARCHAR(50),
+    taskTitle VARCHAR(100),
+    task VARCHAR(1000),
+    timeCreated TIME,
+    dateCreated DATE,
+    dueTime TIME,
+    dueDate DATE,
+    status BOOLEAN DEFAULT FALSE
